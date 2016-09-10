@@ -1,4 +1,4 @@
-function LonginCtrl($location, $scope) {
+function LonginCtrl($location, $scope, $http) {
 
 	var login = this;
 
@@ -14,26 +14,10 @@ function LonginCtrl($location, $scope) {
 		console.log("click");
 		console.log($scope.user);
 		console.log($scope.password);
-		/*request({
-	    method:'POST',
-	    body:{
-	      "password" : "12345",
-	      "user" : "medico-123123",
-	      "pass" : "qwerty"
-	    },
-	    uri: 'http://172.16.11.97:8989/',
-	    json: true
-	    }, (err, res, body) =>{
-	       console.log(body);	       
-	       if(body.successPassword === true){
-	          //
-
-	       }else{
-	          alert("Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");
-	          
-	       }
-	       */
-	       var rol=$scope.user;
+    
+    $http.post("http://172.16.11.97:3000/login/",{user:"medico-adf", password:"asdasd"})
+    	.success(function(data){       	 	
+    		var rol=data.result.rol;
 	       console.log("El rol es: "+rol);
 	       if(rol=="paciente"){
 	       	$location.path('/dashboards/1');
@@ -43,6 +27,11 @@ function LonginCtrl($location, $scope) {
 	       }else{
 	       	$location.path('/pharm/dash');
 	       }
+    	})
+    	.error(function (data) {
+			swal("Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");
+			$location.path('/#/login');
+        })
 		
 	}
 
