@@ -2,7 +2,7 @@
     <div class="row">
         <h3>Registro</h3>
         <p>Create account to see it in action.</p>
-        <form class="form" role="form" ng-subit="registerClick()">
+        <form class="form" role="form" ng-submit="registerClick()">
             <div class="form-group col-md-6 col-lg-6 col-sm-12">
                 <label>Nombre</label>
                 <input type="text" class="form-control" ng-model="register.nombre" placeholder="Nombre" required="">
@@ -75,6 +75,9 @@
                 <label>Estado</label>
                 <select class="form-control" ng-model="register.estado">
                   <option value="">Seleccione</option>        
+                  <option value="Guadalajara">Guadalajara</option>   
+                  <option value="Monterrey">Monterrey</option>   
+                  <option value="Mexico">Mexico</option>   
                 </select>
             </div>  
             <div class="form-group col-md-6 col-lg-6 col-sm-12">

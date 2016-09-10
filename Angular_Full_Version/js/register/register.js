@@ -31,7 +31,16 @@ function RegisterCtrl($location, $scope, $http) {
 
 	$scope.registerClick = function(){
 		console.log("click");
-		console.log($scope.register);		
+		console.log($scope.register);	
+
+		$http({
+                      method : "POST",
+                      data: $scope.register,
+                      url : "http://172.16.1.43:3000/medicos"
+                  }).success(function(resultado, status, headers, config){
+                            swal("Registro guardado", "El usuario se dio de alta con exito", "success");				
+                          $location.path('/');
+                  });	
 	}
 }
 /**

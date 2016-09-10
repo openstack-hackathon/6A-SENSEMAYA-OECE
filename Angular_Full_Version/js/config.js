@@ -110,7 +110,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('doc.register', {
             url: "/register",
             templateUrl: "views/register.html",
-        })          
+        })   
+        .state('doc.search', {
+            url: "/search",
+            templateUrl: "views/search.html",
+        })                  
         .state('access', {
             url: "/accessece",
             templateUrl: "views/doctor/access.html",
