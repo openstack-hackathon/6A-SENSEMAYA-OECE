@@ -5,8 +5,6 @@ var express = require('express'),
     validate = require('../services/serviceExpediente.js')
     router = express.Router();
 
-const SwiftClient = require('swift-client');
-
     router.get('/', function(req, res){
 
       var qry = pacienteModel.find({});
@@ -105,8 +103,6 @@ const SwiftClient = require('swift-client');
         console.log('Save....');
         console.log(err);
         console.log(data);
-        client =  SwiftClient.create('http://172.16.6.2:8080/v1/AUTH_af39c34c6a8b4c628c853f5803e6f978',
-        'team.d3', 'iVfnYXOd');
         common.send(err, data, res);
       })
 
