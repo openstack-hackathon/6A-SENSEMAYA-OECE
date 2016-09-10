@@ -21,7 +21,7 @@ swig.setDefaults({cache:false})
 **
 ******************************************/
 
-mongoose.connect('mongodb://localhost:27017/DigitalPlot');
+//mongoose.connect('mongodb://localhost:27017/DigitalPlot');
 //mongoose.connect("mongodb://localhost:27017/CrossAdmin-test");
 var db = mongoose.connection;
 
@@ -39,6 +39,11 @@ app.use(express.static('node_modules/express.io'))
 // Body parser
 app.use(bodyParser.json())
 
+
+/********** ROUTES *********/
+var login = require('./routes/login');
+
+app.use('/login', login);
 
 app.get('/', function (req, res) {
 	res.send({success:true});
