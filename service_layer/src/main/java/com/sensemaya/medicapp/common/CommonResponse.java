@@ -4,6 +4,7 @@ public class CommonResponse {
 
 	private boolean success;
 	private String message;
+	private Object result;
 	
 	public String getMessage() {
 		return message;
@@ -21,6 +22,12 @@ public class CommonResponse {
 	public static CommonResponse responseDummy(){
 		CommonResponse response = new CommonResponse();
 		return response;
+	}
+	public Object getResult() {
+		return result;
+	}
+	public void setResult(Object result) {
+		this.result = result;
 	}
 	
 }
