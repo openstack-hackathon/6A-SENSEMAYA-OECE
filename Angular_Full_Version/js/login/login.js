@@ -1,8 +1,6 @@
-function LonginCtrl($location, $scope) {
+function LonginCtrl($location, $scope, $http) {
 
 	var login = this;
-	console.log("Hola");
-	console.log("Holaqwe2ew");
 
 	$scope.login = {
 		user : "us",
@@ -16,7 +14,25 @@ function LonginCtrl($location, $scope) {
 		console.log("click");
 		console.log($scope.user);
 		console.log($scope.password);
-		$location.path('/#');
+    
+    $http.post("http://172.16.11.97:3000/login/",{user:""+$scope.user, password:""+$scope.password})
+    	.success(function(data){       	 	
+    		var rol=data.result.rol;
+	       console.log("El rol es: "+rol);
+	       if(rol=="Paciente"){
+	       	$location.path('/dashboards/1');
+	       }
+	       else if(rol=="Medico"){
+	       		$location.path('/doc/dash');
+	       }else{
+	       	$location.path('/pharm/dash');
+	       }
+    	})
+    	.error(function (data) {
+			swal("Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");
+			$location.path('/#/login');
+        })
+		
 	}
 
 	 
