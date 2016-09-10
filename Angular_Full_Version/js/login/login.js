@@ -19,10 +19,10 @@ function LonginCtrl($location, $scope, $http) {
     	.success(function(data){       	 	
     		var rol=data.result.rol;
 	       console.log("El rol es: "+rol);
-	       if(rol=="paciente"){
+	       if(rol=="Paciente"){
 	       	$location.path('/dashboards/1');
 	       }
-	       else if(rol=="medico"){
+	       else if(rol=="Medico"){
 	       		$location.path('/doc/dash');
 	       }else{
 	       	$location.path('/pharm/dash');

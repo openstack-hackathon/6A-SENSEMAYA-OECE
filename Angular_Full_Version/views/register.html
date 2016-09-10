@@ -1,29 +1,121 @@
-<div class="middle-box text-center loginscreen   animated fadeInDown">
-    <div>
-        <div>
-
-            <h1 class="logo-name">IN+</h1>
-
-        </div>
-        <h3>Register to IN+</h3>
+<div class="wrapper wrapper-content" ng-controller="RegisterCtrl">
+    <div class="row">
+        <h3>Registro</h3>
         <p>Create account to see it in action.</p>
-        <form class="m-t" role="form" action="login.html">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name" required="">
+        <form class="form" role="form" ng-subit="registerClick()">
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Nombre</label>
+                <input type="text" class="form-control" ng-model="register.nombre" placeholder="Nombre" required="">
             </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email" required="">
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Apellido paterno</label>
+                <input type="text" class="form-control" ng-model="register.apPaterno" placeholder="Apellido Paterno" required="">
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="">
-            </div>
-            <div class="form-group">
-                <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
-            </div>
-            <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
-
-            <p class="text-muted text-center"><small>Already have an account?</small></p>
-            <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Apellido materno</label>
+                <input type="text" class="form-control" ng-model="register.apMaterno" placeholder="Apellido Materno" required="">
+            </div>   
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Fecha Nacimiento</label>
+                <input type="date" ng-model="register.fechaNac" class="form-control" required="">
+            </div> 
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Sexo</label>
+                <label class="radio-inline"><input type="radio" ng-model="register.sexo" name="optradio" value="M">Masculino</label>
+                <label class="radio-inline"><input type="radio" ng-model="register.sexo" name="optradio" value="F">Femenino</label>
+            </div>               
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>C.U.R.P.</label>
+                <input type="text" class="form-control" ng-model="register.curp" placeholder="CURP" required="">
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Estado civil</label>
+                <select class="form-control" ng-model="register.estadoC">
+                  <option value="Indistinto">Indistinto</option>
+                  <option value="Soltero">Soltero</option>
+                  <option value="Casado">Casado</option>                  
+                </select>
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Nacionalidad</label>
+                <select class="form-control" ng-model="register.nacionalidad">
+                  <option value="Mexicano">Mexicano</option>        
+                </select>
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Lugar de nacimiento</label>
+                <input type="text" class="form-control" ng-model="register.lugarNac" placeholder="Lugar de nacimiento" required="">
+            </div> 
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Calle</label>
+                <input type="text" class="form-control" ng-model="register.calle" placeholder="Calle" required="">
+            </div> 
+           <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>N&uacute;mero</label><br>
+                <label>Exterior</label>
+                <input type="text" class="form-control" ng-model="register.numEx" placeholder="#" required="">
+                <label>Interior</label>
+                <input type="text" class="form-control" ng-model="register.numIn" placeholder="#" required="">
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Colonia</label>
+                <input type="text" class="form-control" ng-model="register.colonia" placeholder="Colonia" required="">
+            </div>     
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>C&oacute;digo postal</label>
+                <input type="text" class="form-control" ng-model="register.cp" placeholder="" required="">
+            </div>    
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Pais</label>
+                <select class="form-control" ng-model="register.pais">
+                  <option value="Mexico">Mexico</option>        
+                </select>
+            </div>         
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Estado</label>
+                <select class="form-control" ng-model="register.estado">
+                  <option value="">Seleccione</option>        
+                </select>
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Ocupaci&oacute;n</label>
+                <input type="text" class="form-control" ng-model="register.ocupacion"placeholder="Ocupaci&oacute;n" required="">
+            </div>    
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Telefono 1</label>
+                <input type="text" class="form-control" ng-model="register.tel1" placeholder="" required="">
+            </div>  
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Telefono 2</label>
+                <input type="text" class="form-control" ng-model="register.tel2" placeholder="" required="">
+            </div>    
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Celular</label>
+                <input type="text" class="form-control" ng-model="register.cel" placeholder="" required="">
+            </div>         
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Religion</label>
+                <input type="text" class="form-control" ng-model="register.religion" placeholder="Religion" required="">
+            </div> 
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Email</label>
+                <input type="email" class="form-control" ng-model="register.email" placeholder="" required="">
+            </div>    
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Grupo sanguineo</label>
+                <select class="form-control" ng-model="register.grupoS" required="">
+                  <option value="">Seleccione</option>    
+                  <option value="O+">O+</option>    
+                  <option value="A+">A+</option> 
+                  <option value="B+">B+</option> 
+                  <option value="B-">B-</option> 
+                </select>
+            </div>     
+            <div class="form-group col-md-12 col-lg-12 col-sm-12">
+                <label>Comentarios</label>                
+                <textarea class="form-control" ng-model="register.coment" cols="6"></textarea>                      
+            </div>                                                                             
+            <button type="submit"  class="btn btn-primary block full-width m-b">Registrar</button>
         </form>
         <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
     </div>
