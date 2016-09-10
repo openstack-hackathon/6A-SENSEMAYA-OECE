@@ -1,0 +1,26 @@
+package com.sensemaya.medicapp.common;
+
+public class CommonResponse {
+
+	private boolean success;
+	private String message;
+	
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public boolean isSuccess() {
+		return success;
+	}
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+	public static CommonResponse responseDummy(){
+		CommonResponse response = new CommonResponse();
+		return response;
+	}
+	
+}
