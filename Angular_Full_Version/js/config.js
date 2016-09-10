@@ -30,16 +30,20 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/login",
             templateUrl: "views/login_two_columns.html",
             data: { pageTitle: 'Login', specialClass: 'gray-bg' }
+        }).state('singup', {
+            url: "/singup",
+            templateUrl: "views/registro-medico/registro-medico.html",
+            data: { pageTitle: 'Registro Medico', specialClass: 'gray-bg' }
         })
 
         /**
             Views Patient
-        */   
+        */
         .state('dashboards', {
             abstract: true,
             url: "/dashboards",
             templateUrl: "views/patient/common/content.html",
-        })     
+        })
         .state('dashboards.1', {
             url: "/1",
             templateUrl: "views/patient/dashboard_1.html",
@@ -82,7 +86,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             abstract: true,
             url: "/doc",
             templateUrl: "views/doctor/common/content.html",
-        })          
+        })
         .state('doc.dash', {
             url: "/dash",
             templateUrl: "views/doctor/dashboard_1.html",
@@ -133,7 +137,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             abstract: true,
             url: "/pharm",
             templateUrl: "views/pharmacy/common/content.html",
-        })         
+        })
         .state('pharm.dash', {
             url: "/dash",
             templateUrl: "views/pharmacy/dashboard_1.html",
@@ -157,7 +161,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                     ]);
                 }
             }
-        }) 
+        })
         .state('read_pre', {
             url: "/read_pre",
             templateUrl: "views/pharmacy/read_pre.html",

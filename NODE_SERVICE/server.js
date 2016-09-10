@@ -23,6 +23,7 @@ swig.setDefaults({cache:false})
 
 //mongoose.connect('mongodb://localhost:27017/DigitalPlot');
 //mongoose.connect("mongodb://localhost:27017/CrossAdmin-test");
+mongoose.connect("mongodb://localhost:27017/APP_ECE");
 var db = mongoose.connection;
 
 
@@ -42,8 +43,20 @@ app.use(bodyParser.json())
 
 /********** ROUTES *********/
 var login = require('./routes/login');
+var exp = require('./routes/expediente');
+var farmacia = require('./routes/farmacia');
+var medicos = require('./routes/medicos');
+var pacientes = require('./routes/pacientes');
+var werable = require('./routes/Werable');
+var access = require('./routes/AccessController');
 
 app.use('/login', login);
+app.use('/exp', exp);
+app.use('/farmacia', farmacia);
+app.use('/medicos', medicos);
+app.use('/pacientes', pacientes);
+app.use('/werable', werable);
+app.use('/access', access);
 
 app.get('/', function (req, res) {
 	res.send({success:true});
