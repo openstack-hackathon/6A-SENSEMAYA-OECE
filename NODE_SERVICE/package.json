@@ -1,0 +1,30 @@
+{
+  "name": "ece",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+    "alt": "^0.18.5",
+    "alt-container": "^1.0.2",
+    "alt-utils": "^1.0.0",
+    "body-parser": "^1.15.2",
+    "browser-request": "^0.3.3",
+    "express": "^4.14.0",
+    "express.io": "^1.1.13",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "mongoose": "^4.5.9",
+    "node-uuid": "^1.4.7",
+    "request": "^2.73.0",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8",
+    "swig": "^1.4.2",
+    "webpack": "^1.13.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

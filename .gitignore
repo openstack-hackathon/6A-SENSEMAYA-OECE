@@ -3,3 +3,4 @@ service_layer/.classpath
 service_layer/.project
 service_layer/.settings/
 service_layer/.gradle/3.0/
+NODE_SERVICE/node_modules/
