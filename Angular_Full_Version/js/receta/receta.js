@@ -1,4 +1,4 @@
-function InfoPCtrl($location, $scope, $http,$rootScope) {
+function RecetaCtrl($location, $scope, $http,$rootScope) {
 	console.log($rootScope.paciente);
 
 	$scope.realizatx = function(){
@@ -13,4 +13,4 @@ function InfoPCtrl($location, $scope, $http,$rootScope) {
  */
 angular
 .module('inspinia')
-.controller('InfoPCtrl', InfoPCtrl);
+.controller('RecetaCtrl', RecetaCtrl);
