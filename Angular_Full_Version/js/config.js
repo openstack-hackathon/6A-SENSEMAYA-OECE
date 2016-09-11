@@ -114,7 +114,20 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('doc.register', {
             url: "/register",
             templateUrl: "views/register.html",
-        })
+        })   
+        .state('doc.search', {
+            url: "/search",
+            templateUrl: "views/search.html",
+        }) 
+        .state('doc.validatoken', {
+            url: "/validatoken",
+            templateUrl: "views/validatoken.html",
+        }) 
+
+        .state('doc.paciente', {
+            url: "/paciente",
+            templateUrl: "views/expediente.html",
+        })                          
         .state('access', {
             url: "/accessece",
             templateUrl: "views/doctor/access.html",
