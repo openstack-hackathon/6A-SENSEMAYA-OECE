@@ -5,6 +5,8 @@ var express = require('express'),
     validate = require('../services/serviceExpediente.js'),
     request = require('request'),
     swiftWrapper = require('../helper/swiftWrapper.js'),
+    expedienteModel = require('../model/ExpedienteModel.js'),
+    notasModel = require('../model/NotaMedicaModel.js')
     router = express.Router();
 
     router.get('/', function(req, res){
@@ -15,6 +17,16 @@ var express = require('express'),
       qry.exec(function(err, data){
           common.send(err, data, res);
       });
+
+    });
+
+    router.get('/currentReceta/:idPaciente', function(req, res){
+      console.log({idUsuario:req.params.idPaciente});
+      notasModel.findOne({idUsuario:req.params.idPaciente},function(err, doc){
+        console.log(err);
+        console.log(doc);
+        res.send({success:true, result : doc});
+      })
 
     });
 

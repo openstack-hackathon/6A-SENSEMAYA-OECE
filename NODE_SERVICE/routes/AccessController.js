@@ -3,6 +3,7 @@ var express = require('express'),
     common = require('./CommonResponse'),
     randomToken = require('random-token'),
     request = require('request'),
+    pacienteModel = require('../model/PacienteModel.js'),
     router = express.Router();
 
     router.get('/', function(req, res){
@@ -18,10 +19,13 @@ var express = require('express'),
       var access = new accessModel(accessObject);
       access.save(function(err, doc){
         return res.send({success:true});
-/*
-          postData('',accessObject.tokenId,function(){
-              return common.send(err,doc, res);
-          })*/
+          pacienteModel.findOne({_id:accessObject.idPaciente},function(err, doc){
+            console.log(doc);
+            
+            postData(doc.telefono,accessObject.tokenId,function(){
+                return common.send(err,doc, res);
+            })
+          })
 
       });
 
@@ -32,12 +36,12 @@ var express = require('express'),
     });
 
     function createToken(){
-    //  return randomToken(5);
-    return "12345";
+      return randomToken(5);
+      //return "12345";
     }
 
   function postData(num, data, callback){
-    var mensajePost = "https://www.masmensajes.com.mx/wss/smsapi11.php?usuario=isa&password=isasystem&celular=+525552137297&mensaje="+data;
+    var mensajePost = "https://www.masmensajes.com.mx/wss/smsapi11.php?usuario=isa&password=isasystem&celular=+52"+num+"&mensaje="+data;
      console.log(mensajePost);
      request.post(
         mensajePost,
