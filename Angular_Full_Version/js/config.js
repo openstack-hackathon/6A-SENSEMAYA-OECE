@@ -89,7 +89,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('doc.dash', {
             url: "/dash",
-            templateUrl: "views/doctor/dashboard_1.html",
+            templateUrl: "views/search.html",
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
