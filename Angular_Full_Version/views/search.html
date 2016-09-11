@@ -1,6 +1,6 @@
 <div class="wrapper wrapper-content" ng-controller="SearchCtrl">
     <div class="row">
-        <h3>Busqueda de paciente</h3>        
+        <h3>Busqueda de paciente</h3>
         <form class="form" role="form" ng-submit="searchClick()">
             <div class="form-group col-md-6 col-lg-6 col-sm-12">
                 <label>Buscar por:</label>
@@ -14,30 +14,30 @@
                 <label ng-show="search.tipo!='NOMBRE'">Buscar:</label>
                 <label ng-show="search.tipo==='NOMBRE'">Nombre:</label>
                 <input type="text" class="form-control" ng-model="search.parametro" placeholder="" required="">
-            </div>     
+            </div>
             <div ng-show="search.tipo==='NOMBRE'" class="form-group col-md-6 col-lg-6 col-sm-12">
                 <label ng-show="search.tipo==='NOMBRE'">Apellido Paterno:</label>
                 <input ng-show="search.tipo==='NOMBRE'"type="text" class="form-control" ng-model="search.parametro2" placeholder="">
-            </div>       
+            </div>
             <div ng-show="search.tipo==='NOMBRE'" class="form-group col-md-6 col-lg-6 col-sm-12">
                 <label ng-show="search.tipo==='NOMBRE'">Apellido Materno:</label>
                 <input ng-show="search.tipo==='NOMBRE'" type="text" class="form-control" ng-model="search.parametro3" placeholder="">
-            </div>                                                                           
+            </div>
             <button type="submit"  class="btn btn-primary block m-b"><span class="fa fa-search"></span> Buscar</button>
-        </form>   
+        </form>
         <div class="col-md-6 col-lg-6 col-sm-12">
                 <table class="table table-stripped">
-                        <tr ng-repeat="reg in result">
-                 <td data-title="'Identificador Rol'" >{{reg.nombre}}</td>                            
+                  <tr ng-repeat="reg in result">
+                 <td data-title="'Identificador Rol'" >{{reg.nombre}}</td>
                  <td data-title="'Identificador Rol'" >{{reg.apellidoPaterno}}</td>
                  <td data-title="'Identificador Rol'" >{{reg.apellidoMaterno}}</td>
                  <td data-title="'Identificador Rol'" >
-                 <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td> 
+                 <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td>
                 </tr>
-             </table>  
-        </div>   
+             </table>
+        </div>
        <div class="col-md-6 col-lg-6 col-sm-12" ng-show="{result.length == 0}">
-        <a ui-sref="doc.register"class="btn btn-primary">Registradr</a>    
-        </div>             
+        <a ui-sref="doc.register"class="btn btn-primary">Registradr</a>
+        </div>
     </div>
 </div>

@@ -1,8 +1,10 @@
 function RecetaCtrl($location, $scope, $http,$rootScope) {
-	console.log("$rootScope.paciente");
+  $scope.showNotaMedica = false;
+  console.log("$rootScope.paciente");
   console.log($rootScope.paciente);
   $scope.paciente = $rootScope.paciente.result;
   $scope.idPaciente = $scope.paciente._id;
+  $scope.showHistMedica = false;
   $scope.datPaciente = {
     "nombrePaciente": $scope.paciente.nombre + " " +$scope.paciente.apellidoPaterno + " " +$scope.paciente.apellidoMaterno,
     "peso":$scope.paciente.peso,
@@ -54,7 +56,7 @@ POST  http://127.16.1.43:3000/exp/notaMedica/57d437a7ab27a76ed76bb56e
     $http({
 					  method : "POST",
 					  data: $scope.datPaciente,
-					  url : " http://172LOR.16.1.43:3000/exp/notaMedica/"+$scope.idPaciente
+					  url : " http://172.16.1.43:3000/exp/notaMedica/"+$scope.idPaciente
 				  }).success(function(resultado, status, headers, config){
 							console.log("Nota medica guardada");
 				  });
@@ -63,10 +65,26 @@ POST  http://127.16.1.43:3000/exp/notaMedica/57d437a7ab27a76ed76bb56e
 
   }
 
+  $scope.verHistorialMedico = function(){
+    $scope.showHistMedica = true;
+    $scope.showNotaMedica = false;
+
+ $http({
+         method : "GET",
+         data: $scope.datPaciente,
+         url : "http://172.16.1.43:3000/exp/notaMedica/"+$scope.idPaciente
+       }).success(function(resultado, status, headers, config){
+           console.log("Nota medica guardada");
+           $scope.result = resultado.result;
+       });
+  }
+
   $scope.realizatx = function(){
-		console.log("realizartx...");
+    $scope.showHistMedica = false;
+    $scope.showNotaMedica = true;
+		/*console.log("realizartx...");
 		console.log($rootScope.paciente);
-		$location.path('/doc/receta');
+		$location.path('/doc/receta');*/
 	}
 
   $scope.example = {

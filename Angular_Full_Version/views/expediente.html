@@ -2,25 +2,21 @@
     <div class="row">
         <h2>Información del paciente</h2>
         <div class="col-md-12 col-lg-12 col-sm-12" style="border: 1px solid #ccc; font-size:1.1em;">
-            <div class="col-md-7 col-lg-7 col-sm-12">                
+            <div class="col-md-7 col-lg-7 col-sm-12">
                 <p>{{d1}}</p>
-                <p>{{d2}}</p>                
+                <p>{{d2}}</p>
                 <p>{{d3}}</p>
             </div>
             <div class="col-md-5 col-lg-5 col-sm-12">
                 <label>Patologicas</label>
-                <ul>                
+                <ul>
                         <li ng-repeat="x in paciente.result.patologicas">
                          <td>{{x.enfermedad}}</td>
                         </li>
                 </ul>
             </div>
         </div>
-        <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
-            <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-files-o"></span>Ver Notas</a>
-            <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Ver Hitorial</a>
-            <a class="btn btn-primary" ng-click="realizatx()"><span class="fa fa-file"></span> Crear receta</a>
-        </div>
+
     </div>
     <div class="row" ng-show="histActivo" style="background-color:#fff">
          <h2>Historial clinico</h2>
@@ -45,7 +41,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse2"><b>Fecha: </b> 12/02/2015 Info info </a>                  
+                  <a data-toggle="collapse" href="#collapse2"><b>Fecha: </b> 12/02/2015 Info info </a>
                 </h4>
               </div>
               <div id="collapse2" class="panel-collapse collapse">
@@ -57,6 +53,113 @@
                 <div class="panel-footer">Footer</div>
               </div>
             </div>
-          </div>          
+          </div>
     </div>
+</div>
+
+
+<div class="wrapper wrapper-content" ng-controller="RecetaCtrl">
+  <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
+      <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Ver Hitorial Notas</a>
+      <a class="btn btn-primary" ng-click="realizatx()"><span class="fa fa-file"></span> Crear Nota M&eacute;dica</a>
+  </div>
+    <div class="row" ng-show="showNotaMedica">
+        <h2>Nota M&eacute;dica</h2>
+        <div class="row" >
+            <form class="form" role="form" ng-subit="registerClickq();">
+              <div class="form-group col-md-6 col-lg-12 col-sm-12">
+                <div style="float: right;">
+                    <label>Fecha</label>
+                    <input type="date" id="exampleInput" name="input" ng-model="example.value" placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+                </div>
+              </div>
+              <div class="form-group col-md-12 col-lg-9 col-sm-12">
+                    <label>Nombre M&eacute;dico</label>
+                  <input type="text" class="form-control" ng-model="nombreMedico" placeholder="Nombre M&eacute;dico" required="true">
+              </div>
+              <div class="form-group col-md-12 col-lg-3 col-sm-12">
+                    <label>C&eacute;dula Profesional</label>
+                  <input type="text" class="form-control" ng-model="medico.cedula" placeholder="C&eacute;dula Profesional" required="true">
+              </div>
+
+                <div class="form-group col-md-6 col-lg-12 col-sm-12">
+                      <label>Nombre Paciente</label>
+                    <input type="text" class="form-control" ng-model="datPaciente.nombrePaciente" placeholder="Nombre" required="true">
+                </div>
+                <div class="form-group col-md-6 col-lg-3 col-sm-12">
+                    <label>Peso</label>
+                    <input type="text" class="form-control" ng-model="datPaciente.peso" placeholder="Peso">
+                </div>
+                <div class="form-group col-md-6 col-lg-3 col-sm-12">
+                    <label>Estatura</label>
+                    <input type="text" class="form-control" ng-model="datPaciente.statura" placeholder="Estatura">
+                </div>
+                <div class="form-group col-md-6 col-lg-3 col-sm-12">
+                    <label>Presi&oacute;n</label>
+                    <input type="text" class="form-control" ng-model="datPaciente.presion" placeholder="Presi&oacute;n">
+                </div>
+                <div class="form-group col-md-6 col-lg-3 col-sm-12">
+                    <label>Temperatura</label>
+                    <input type="text" class="form-control" ng-model="datPaciente.temperatura" placeholder="Temperatura">
+                </div>
+                <div class="col-lg-12">
+                  <br>
+                  <br>
+                </div>
+
+                <!-- <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 16px; margin-right: 16px;border-style: inset;border-width: 1px;"></hr> -->
+                <span style="margin-left:16px"><label>Paciente Masculino de edad $ presenta los siguientes sintomas</label></span>
+                <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 16px; margin-right: 16px;border-style: inset;border-width: 1px;"></hr>
+                <div class="form-group col-md-6 col-lg-12 col-sm-12">
+                  <br>
+                  <br>
+                  <label>Subjetivo</label>
+                  <textarea style="width: 100%;height: 120px; resize:none" ng-model="datPaciente.subjetivo"></textarea>
+                  <br>
+                  <br>
+                  <label>Objetivo</label>
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-model="datPaciente.objetivo"></textarea>
+                  <br>
+                  <br>
+                  <label>An&aacute;lisis</label>
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-model="datPaciente.analisis"></textarea>
+                  <br>
+                  <br>
+                  <label>Diagn&oacute;stico</label>
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-model="datPaciente.diagnostico"></textarea>
+                  <br>
+                  <br>
+                  <br>
+                  <label>Tratamiento</label>
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-model="datPaciente.tratamiento"></textarea>
+                  <br>
+                  <br>
+                  <br>
+                  <label> <input type="checkbox" ng-model="master"> An&aacute;lisis de Laboratorio</label><br/>
+                  <input type="checkbox" ng-model="checkboxModel.value1">
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-show="false" ng-model="datPaciente.laboratorio"></textarea>
+                </div>
+                <div class="form-group col-md-6 col-lg-12 col-sm-12" style="text-align: right;">
+                  <button type="submit" ng-click="cancelar()"class="btn btn-primary"  >Cancelar</button>
+                  <button type="submit" ng-click="guardaReceta()"class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" ng-show="showHistMedica">
+        <h2>Historial Notas M&eacute;dica</h2>
+        <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                <tr ng-repeat="reg in result">
+                 <td data-title="'Identificador Rol'" >{{reg.medico}}</td>
+                 <td data-title="'Identificador Rol'" >{{reg.diagnostico}}</td>
+                 <td data-title="'Identificador Rol'" >{{reg.tratamiento}}</td>
+                 <td data-title="'Identificador Rol'" >
+                 <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td>
+                </tr>
+             </table>
+        </div>
+    </div>
+
+
 </div>
