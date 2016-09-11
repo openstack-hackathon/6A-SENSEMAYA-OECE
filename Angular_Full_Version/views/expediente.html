@@ -1,7 +1,5 @@
 <div class="wrapper wrapper-content" ng-controller="InfoPCtrl">
     <div class="row">
-        <h2>{{d1}}</h2>
-        <hr>
         <div class="col-md-12 col-lg-12 col-sm-12">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="doc/paciente/#home">Ficha</a></li>
@@ -9,11 +7,14 @@
             </ul>
             <div class="tab-content">
               <div id="home" class="tab-pane fade in active">
+                <h2>{{d1}}</h2>
+                <hr>
                 <p>{{d2}}</p>
                 <p>{{d3}}</p>
               </div>
               <div id="menu1" class="tab-pane fade">
                 <h3>Antecendentes Hereditarios</h3>
+                <hr>
                 <ul>
                     <li ng-repeat="x in paciente.result.antecedentesHerodo">
                         <p></p>
