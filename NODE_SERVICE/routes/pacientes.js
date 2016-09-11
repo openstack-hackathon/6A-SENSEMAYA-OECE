@@ -2,10 +2,14 @@ var express = require('express'),
     pacienteModel = require('../model/PacienteModel'),
     common = require('./CommonResponse'),
     accessModel = require('../model/AccessModel'),
-    validate = require('../services/serviceExpediente.js')
+    validate = require('../services/serviceExpediente.js'),
+    request = require('request'),
+    swiftWrapper = require('../helper/swiftWrapper.js'),
     router = express.Router();
 
     router.get('/', function(req, res){
+
+      swiftWrapper.getInstances();
 
       var qry = pacienteModel.find({});
       qry.exec(function(err, data){
@@ -100,9 +104,9 @@ var express = require('express'),
       var paciente = new pacienteModel(pcObject);
 
       paciente.save(function(err, data){
-        console.log('Save....');
-        console.log(err);
-        console.log(data);
+        swiftWrapper.createContainer(data._id, function(err,data){
+          console.log('test container');
+        })
         common.send(err, data, res);
       })
 

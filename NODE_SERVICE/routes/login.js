@@ -1,4 +1,6 @@
 var express = require('express'),
+    medicoModel = require('../model/MedicoModel.js'),
+    pacienteModel = require('../model/PacienteModel.js'),
     router = express.Router();
 
     router.get('/', function(req, res){
@@ -11,11 +13,28 @@ var express = require('express'),
       var login = req.body;
       console.log(req.body);
 
-      var splitUsr = login.user.split('-');
+      var qryPaciente = pacienteModel.findOne({curp:login.user},
+        function(err, data){
+          if(data != null){
+            var result = new Object(data);
+            result.rol = "paciente";
+            res.send({success:true, result : result, rol : 'paciente'})
+          }else{
 
-      var result = {rol : splitUsr[0], userName : login.user};
+            medicoModel.findOne({curp:login.user}, function(err,data){
 
-      res.send({success:true, result : result})
+              if(data != null){
+                var result = new Object(data);
+                result.rol = "medico";
+                res.send({success:true, result : result, rol : 'medico'})
+              }else{
+                res.send({success:false})
+              }
+
+            })
+
+          }
+        });
 
     });
 
