@@ -1,0 +1,14 @@
+<div class="wrapper wrapper-content" ng-controller="validacionCtrl">
+    <div class="row">
+        <h2>Validar Token</h2>        
+        <h3>Para poder ver el expediente clinico ingrese el token que el paciente recibio</h3>
+        <form class="form" role="form" ng-submit="validaToken()">
+            <div class="form-group col-lg-6 col-md-6  col-sm-12">
+                <input class="form-control" type="text" placeholder="Token" ng-model="tokenU" required="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6  col-sm-12">
+                <input class="btn btn-primary" type="submit" value="Enviar">
+            </div>            
+        </form>           
+    </div>
+</div>

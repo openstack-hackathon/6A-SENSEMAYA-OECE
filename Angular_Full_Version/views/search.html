@@ -31,10 +31,10 @@
                  <td data-title="'Identificador Rol'" >{{reg.nombre}}</td>                            
                  <td data-title="'Identificador Rol'" >{{reg.apellidoPaterno}}</td>
                  <td data-title="'Identificador Rol'" >{{reg.apellidoMaterno}}</td>
-                 <td data-title="'Identificador Rol'" ><button class="btn btn-success">Solicitar Token</button></td>                            
-                        </tr>
-                        
-                      </table>  
+                 <td data-title="'Identificador Rol'" >
+                 <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td> 
+                </tr>
+             </table>  
         </div>   
        <div class="col-md-6 col-lg-6 col-sm-12" ng-show="{result.length == 0}">
         <a ui-sref="doc.register"class="btn btn-primary">Registradr</a>    
