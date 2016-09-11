@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 
 
 // Static files
-app.use('/assets', express.static(__dirname + '/public'))
+app.use('/', express.static(__dirname + '/public'))
 app.use(express.static('node_modules/express.io'))
 // Body parser
 app.use(bodyParser.json())
@@ -57,10 +57,6 @@ app.use('/medicos', medicos);
 app.use('/pacientes', pacientes);
 app.use('/werable', werable);
 app.use('/access', access);
-
-app.get('/', function (req, res) {
-	res.send({success:true});
-})
 
 
 http.listen(3000, function () {
