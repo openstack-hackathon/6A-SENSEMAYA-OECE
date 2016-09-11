@@ -28,7 +28,7 @@ function LonginCtrl($location, $scope, $http, $rootScope) {
 	       }else if(rol=="farmacia"){
 	       	$location.path('/pharm/dash');
 	       }else{
-			swal("Usuario o Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");	       	
+			swal("Usuario o Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");
 	       }
     	})
     	.error(function (data) {
