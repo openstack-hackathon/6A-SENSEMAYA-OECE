@@ -1,68 +1,62 @@
 <div class="wrapper wrapper-content" ng-controller="InfoPCtrl">
-    <div class="row" ng-show="!histActivo">
+    <div class="row">
+        <h2>Información del paciente</h2>
+        <div class="col-md-12 col-lg-12 col-sm-12" style="border: 1px solid #ccc; font-size:1.1em;">
+            <div class="col-md-7 col-lg-7 col-sm-12">                
+                <p>{{d1}}</p>
+                <p>{{d2}}</p>                
+                <p>{{d3}}</p>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-12">
+                <label>Patologicas</label>
+                <ul>                
+                        <li ng-repeat="x in paciente.result.patologicas">
+                         <td>{{x.enfermedad}}</td>
+                        </li>
+                </ul>
+            </div>
+        </div>
         <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
+            <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-files-o"></span>Ver Notas</a>
             <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Ver Hitorial</a>
             <a class="btn btn-primary" ng-click="realizatx()"><span class="fa fa-file"></span> Crear receta</a>
-        </div>
-        <h2>Información del paciente</h2>
-        <div class="col-md-12 col-lg-12 col-sm-12">
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Nombre</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.nombre">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Apellido Paterno</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.apellidoPaterno">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Apellido Materno</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.apellidoMaterno">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Genero</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.genero">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Email</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.mail">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Telefono</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.telefono">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Peso</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.peso">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Estatura</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.statura">
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-4">
-                <label>Tipo sangre</label>
-                <input style="background-color:#fff" readonly="" class="form-control" type="text" ng-model="paciente.result.tipo">
-            </div>
-            <div class="form-group col-md-12 col-lg-12 col-sm-12">
-                <label>Contactos</label>
-                <table class="table table-stripped" style="background-color:#fff;">
-                        <tr ng-repeat="x in paciente.result.contactos">
-                         <td>{{x.contacto}}</td>
-                         <td>{{x.parentesco}}</td>
-                         <td>{{x.telefono}}</td>
-                        </tr>
-                </table>
-            </div>
-            <div class="form-group col-md-4 col-lg-4 col-sm-6">
-                <label>Patologicas</label>
-                <table class="table table-stripped" style="background-color:#fff;">
-                        <tr ng-repeat="x in paciente.result.patologicas">
-                         <td>{{x.enfermedad}}</td>
-                        </tr>
-                </table>
-            </div>
         </div>
     </div>
     <div class="row" ng-show="histActivo" style="background-color:#fff">
          <h2>Historial clinico</h2>
+           <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse1"><b>Fecha: </b> 12/07/2016 Info info </a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <li class="list-group-item">One</li>
+                  <li class="list-group-item">Two</li>
+                  <li class="list-group-item">Three</li>
+                </ul>
+                <div class="panel-footer">Footer</div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapse2"><b>Fecha: </b> 12/02/2015 Info info </a>                  
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <li class="list-group-item">One</li>
+                  <li class="list-group-item">Two</li>
+                  <li class="list-group-item">Three</li>
+                </ul>
+                <div class="panel-footer">Footer</div>
+              </div>
+            </div>
+          </div>          
     </div>
 </div>
