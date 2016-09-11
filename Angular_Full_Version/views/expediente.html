@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content" ng-controller="InfoPCtrl">
-    <div class="row">
+    <div class="row" ng-show="!histActivo">
         <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
-            <a class="btn btn-primary"href=""><span class="fa fa-calendar"></span>Ver Hitorial</a>
+            <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Ver Hitorial</a>
             <a class="btn btn-primary"href=""><span class="fa fa-file"></span> Crear receta</a>
         </div>
         <h2>Información del paciente</h2>        
@@ -61,5 +61,8 @@
                 </table>  
             </div>
         </div>              
+    </div>
+    <div class="row" ng-show="histActivo" style="background-color:#fff">
+         <h2>Historial clinico</h2>
     </div>
 </div>

@@ -1,5 +1,9 @@
 function InfoPCtrl($location, $scope, $http,$rootScope) {
 	console.log($rootScope.paciente.result.apellidoPaterno);
+	$scope.histActivo=false;
+	$scope.verHistorialMedico = function(){
+		$scope.histActivo=true;
+	}
 }
 /**
  *
