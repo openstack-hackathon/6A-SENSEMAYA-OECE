@@ -5,6 +5,7 @@
             <div class="form-group col-md-6 col-lg-6 col-sm-12">
                 <label>Buscar por:</label>
                 <select class="form-control" ng-model="search.tipo" placeholder="Nombre" required="">
+                <option value="">Seleccione</option>
                 <option value="curp">CURP</option>
                 <option value="rfc">RFC</option>
                 <option value="NOMBRE">NOMBRE</option>
@@ -23,21 +24,25 @@
                 <label ng-show="search.tipo==='NOMBRE'">Apellido Materno:</label>
                 <input ng-show="search.tipo==='NOMBRE'" type="text" class="form-control" ng-model="search.parametro3" placeholder="">
             </div>
-            <button type="submit"  class="btn btn-primary block m-b"><span class="fa fa-search"></span> Buscar</button>
+            <div class="form-group text-right col-md-12 col-lg-12 col-sm-12">
+                <button type="submit"  class="btn btn-primary"><span class="fa fa-search"></span> Buscar</button>
+            </div>
         </form>
-        <div class="col-md-6 col-lg-6 col-sm-12">
+        <div class="col-md-8 col-lg-8 col-sm-12">
                 <table class="table table-stripped">
                   <tr ng-repeat="reg in result">
                  <td data-title="'Identificador Rol'" >{{reg.nombre}}</td>
                  <td data-title="'Identificador Rol'" >{{reg.apellidoPaterno}}</td>
                  <td data-title="'Identificador Rol'" >{{reg.apellidoMaterno}}</td>
+                 <td data-title="'Identificador Rol'" >{{reg.curp}}</td>
+                 <td data-title="'Identificador Rol'" >{{reg.rfc}}</td>
                  <td data-title="'Identificador Rol'" >
                  <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td>
                 </tr>
              </table>
         </div>
        <div class="col-md-6 col-lg-6 col-sm-12" ng-show="{result.length == 0}">
-        <a ui-sref="doc.register"class="btn btn-primary">Registradr</a>
+        <a ui-sref="doc.register"class="btn btn-primary">Registrar</a>
         </div>
     </div>
 </div>
