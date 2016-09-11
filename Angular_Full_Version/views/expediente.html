@@ -44,7 +44,7 @@
 
 <div class="wrapper wrapper-content" ng-controller="RecetaCtrl">
   <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
-      <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Ver Hitorial Notas</a>
+      <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Historial Notas M&eacute;dicas</a>
       <a class="btn btn-primary" ng-click="realizatx()"><span class="fa fa-file"></span> Crear Nota M&eacute;dica</a>
   </div>
     <div class="row" ng-show="showNotaMedica">
@@ -119,9 +119,8 @@
                   <br>
                   <br>
                   <br>
-                  <label> <input type="checkbox" ng-model="master"> An&aacute;lisis de Laboratorio</label><br/>
-                  <input type="checkbox" ng-model="checkboxModel.value1">
-                  <textarea style="width: 100%;height: 160px; resize:none" ng-show="false" ng-model="datPaciente.laboratorio"></textarea>
+                  <label> <input type="checkbox" ng-model="checkboxModel.value1">An&aacute;lisis de Laboratorio</label>
+                  <textarea style="width: 100%;height: 160px; resize:none" ng-show="checkboxModel.value1" ng-model="datPaciente.laboratorio"></textarea>
                 </div>
                 <div class="form-group col-md-6 col-lg-12 col-sm-12" style="text-align: right;">
                   <button type="submit" ng-click="cancelar()"class="btn btn-primary"  >Cancelar</button>
@@ -131,15 +130,27 @@
         </div>
     </div>
     <div class="row" ng-show="showHistMedica">
-        <h2>Historial Notas M&eacute;dica</h2>
-        <div class="col-md-6 col-lg-6 col-sm-12">
+        <h2>Historial Notas M&eacute;dicas</h2>
+        <div class="col-md-6 col-lg-12 col-sm-12">
                 <table class="table table-stripped">
                 <tr ng-repeat="reg in result">
-                 <td data-title="'Identificador Rol'" >{{reg.medico}}</td>
-                 <td data-title="'Identificador Rol'" >{{reg.diagnostico}}</td>
-                 <td data-title="'Identificador Rol'" >{{reg.tratamiento}}</td>
-                 <td data-title="'Identificador Rol'" >
-                 <button class="btn btn-success" ng-click="getToken()">Solicitar Token</button></td>
+                  <td>
+                    <div class="col-lg-10" >
+			                      <div class="col-xs-6 col-lg-12 content-licencias" style="padding-top: 5px;padding-bottom: 5px;">
+			                        <div class="col-xs-12"><span><b>{{reg.fecha | date:'medium'}}</b></span></div>
+			                      </div>
+                            <br>
+			                      <div class="col-xs-3 col-lg-12 content-licencias" style="padding-top: 5px;padding-bottom: 5px;">
+			                        <div class="col-xs-12 "><span><b>Dx:</b></span><span>{{reg.diagnostico}}</span></div>
+			                      </div>
+                            <div class="col-xs-3 col-lg-12 content-licencias" style="padding-top: 5px;padding-bottom: 5px;">
+			                        <div class="col-xs-12 "><span><b>Tx:</b></span><span>{{reg.tratamiento}}</span></div>
+			                      </div>
+			                  </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-success" ng-click="getToken()">Detalle</button></td>
+                        </div>
+                  </td>
                 </tr>
              </table>
 

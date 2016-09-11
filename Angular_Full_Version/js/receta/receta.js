@@ -21,7 +21,7 @@ function RecetaCtrl($location, $scope, $http,$rootScope) {
   // $scope.nombrePaciente = $scope.paciente.nombre + " " +$scope.paciente.apellidoPaterno + " " +$scope.paciente.apellidoMaterno;
 
   $scope.checkboxModel = {
-         value1 : true,
+         value1 : false,
          value2 : 'YES'
        };
 
