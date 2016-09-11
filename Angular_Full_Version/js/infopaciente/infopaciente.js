@@ -3,7 +3,7 @@ function InfoPCtrl($location, $scope, $http,$rootScope) {
 		console.log($rootScope.paciente);
 		var p = $rootScope.paciente.result;
 		console.log(p);
-		$scope.d1="Nombre: "+p.nombre +" "+p.apellidoPaterno +" "+p.apellidoMaterno;
+		$scope.d1=""+p.nombre +" "+p.apellidoPaterno +" "+p.apellidoMaterno;
 		$scope.d2="Genero: "+p.genero +" Estatura: "+p.statura +" Peso: "+p.peso;
 		$scope.d3="Tipo de sangre: "+p.tipo;		
 	$scope.realizatx = function(){
