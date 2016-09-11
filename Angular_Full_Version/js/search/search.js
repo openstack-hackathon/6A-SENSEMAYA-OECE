@@ -9,7 +9,7 @@ function SearchCtrl($location, $scope, $http) {
 		parametro3 : "",
 
 	};	
-	$scope.result={};
+	$scope.result=[];
 	$scope.searchClick = function(){
 		console.log("click");
 		console.log($scope.search);	

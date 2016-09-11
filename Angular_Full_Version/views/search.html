@@ -26,13 +26,18 @@
             <button type="submit"  class="btn btn-primary block m-b"><span class="fa fa-search"></span> Buscar</button>
         </form>   
         <div class="col-md-6 col-lg-6 col-sm-12">
-                <table class="table table-hover">
+                <table class="table table-stripped">
                         <tr ng-repeat="reg in result">
-                 <td data-title="'Identificador Rol'" class="active" sortable="'idRol'" header-class=" flechas_columnas">{{reg.nombre}}</td>                            
-                 <td data-title="'Identificador Rol'" class="active" sortable="'idRol'" header-class=" flechas_columnas">{{reg.apellidoPaterno}}</td>                            
+                 <td data-title="'Identificador Rol'" >{{reg.nombre}}</td>                            
+                 <td data-title="'Identificador Rol'" >{{reg.apellidoPaterno}}</td>
+                 <td data-title="'Identificador Rol'" >{{reg.apellidoMaterno}}</td>
+                 <td data-title="'Identificador Rol'" ><button class="btn btn-success">Solicitar Token</button></td>                            
                         </tr>
                         
                       </table>  
-        </div>     
+        </div>   
+       <div class="col-md-6 col-lg-6 col-sm-12" ng-show="{result.length == 0}">
+        <a ui-sref="doc.register"class="btn btn-primary">Registradr</a>    
+        </div>             
     </div>
 </div>
