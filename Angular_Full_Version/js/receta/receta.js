@@ -16,7 +16,7 @@ function RecetaCtrl($location, $scope, $http,$rootScope) {
     "analisis":"",
     "diagnostico":"",
     "tratamiento":"",
-    "laboratorio":""
+    "":""
   }
   // $scope.nombrePaciente = $scope.paciente.nombre + " " +$scope.paciente.apellidoPaterno + " " +$scope.paciente.apellidoMaterno;
 

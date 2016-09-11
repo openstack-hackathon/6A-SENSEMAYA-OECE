@@ -1,6 +1,6 @@
-<div class="wrapper wrapper-content" ng-controller="InfoPCtrl">
-    <div class="row">
-        <div class="col-md-12 col-lg-12 col-sm-12">
+<div class="wrapper wrapper-content" style="padding-left:5%; padding-right:5%;" ng-controller="InfoPCtrl">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="doc/paciente/#home">Ficha</a></li>
               <li><a data-toggle="tab" href="doc/paciente/#menu1">Antecedentes</a></li>
@@ -38,14 +38,15 @@
                 </ul>
               </div>
             </div>
-        </div>
+
     </div>
 </div>
 
 
-<div class="wrapper wrapper-content" ng-controller="RecetaCtrl">
-  <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff; padding: 10px;">
-      <a class="btn btn-primary" ng-click="verHistorialMedico()"><span class="fa fa-calendar"></span>Historial Notas M&eacute;dicas</a>
+<div class="wrapper wrapper-content" style="padding-left:5%; padding-right:5%;" ng-controller="RecetaCtrl">
+  <div class="col-md-12 col-lg-12 col-sm-12 text-right" style="background-color:#fff;">
+      <a class="btn btn-primary" ng-click="verHistorialMedico()">
+        <span class="fa fa-calendar"></span>Historial Notas M&eacute;dicas</a>
       <a class="btn btn-primary" ng-click="realizatx()"><span class="fa fa-file"></span> Crear Nota M&eacute;dica</a>
   </div>
     <div class="row" ng-show="showNotaMedica">
