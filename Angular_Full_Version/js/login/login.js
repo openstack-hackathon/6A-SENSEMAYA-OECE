@@ -15,7 +15,7 @@ function LonginCtrl($location, $scope, $http, $rootScope) {
 		console.log($scope.user);
 		console.log($scope.password);
 
-    $http.post("http://172.16.1.43:3000/login/",{user:""+$scope.user, password:""+$scope.password})
+    $http.post($rootScope.host+"/login/",{user:""+$scope.user, password:""+$scope.password})
     	.success(function(data){
 				$rootScope.userSession = data;
     		var rol=data.rol;

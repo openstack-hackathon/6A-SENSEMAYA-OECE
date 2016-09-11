@@ -1,4 +1,4 @@
-function SearchCtrl($location, $scope, $http) {
+function SearchCtrl($location, $scope, $http, $rootScope) {
 
 	var search = this;
 $scope.registro = false;
@@ -14,7 +14,7 @@ $scope.registro = false;
 		console.log("click");
 		console.log($scope.search);
 		if($scope.search.tipo!="NOMBRE"){
-		$http.get("http://172.16.1.43:3000/pacientes/"+$scope.search.parametro+"/"+$scope.search.tipo+"")
+		$http.get($rootScope.host+"/pacientes/"+$scope.search.parametro+"/"+$scope.search.tipo+"")
 	    	.success(function(data){
 	    		console.log(data);
 	    		console.log(data.result[0]);
@@ -29,7 +29,7 @@ $scope.registro = false;
 				});
 
 		}else if ($scope.search.tipo=="NOMBRE") {
-		$http.post("http://172.16.1.43:3000/pacientes/find",{nombre:""+$scope.search.parametro, apellidoPaterno:""+$scope.search.parametro2, apellidoMaterno:""+$scope.search.parametro3})
+		$http.post($rootScope.host+"/pacientes/find",{nombre:""+$scope.search.parametro, apellidoPaterno:""+$scope.search.parametro2, apellidoMaterno:""+$scope.search.parametro3})
 	    	.success(function(data){
 	    		console.log(data);
 	    		console.log(data.result[0]);
@@ -54,7 +54,7 @@ $scope.registro = false;
 		$http({
 		method : "POST",
 		data: $scope.dataReq,
-		url : "http://172.16.1.43:3000/access"
+		url : $rootScope.host+"/access"
 		}).success(function(resultado, status, headers, config){
 		console.log("success");
 		$location.path('/doc/validatoken');

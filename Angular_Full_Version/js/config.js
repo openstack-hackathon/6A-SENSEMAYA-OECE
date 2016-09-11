@@ -187,4 +187,5 @@ angular
     .config(config)
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;
+        $rootScope.host = "http://172.16.1.43:3000";
     });

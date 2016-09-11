@@ -1,4 +1,4 @@
-function RegistroMedicoCtrl($location, $scope, $http) {
+function RegistroMedicoCtrl($location, $scope, $http, $rootScope) {
 
 	var register = this;
 
@@ -33,7 +33,7 @@ function RegistroMedicoCtrl($location, $scope, $http) {
 		$http({
 					  method : "POST",
 					  data: $scope.register,
-					  url : "http://172.16.1.43:3000/medicos"
+					  url : $rootScope.host+"/medicos"
 				  }).success(function(resultado, status, headers, config){
 							console.log("success");
 					  	$location.path('/login');
