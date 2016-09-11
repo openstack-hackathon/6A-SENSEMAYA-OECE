@@ -1,5 +1,5 @@
 function InfoPCtrl($location, $scope, $http,$rootScope) {
-	console.log($rootScope.paciente);
+	console.log($rootScope.paciente.result.apellidoPaterno);
 }
 /**
  *

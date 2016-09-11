@@ -12,10 +12,15 @@ function validacionCtrl($location, $scope, $http,$rootScope) {
 		method : "POST",
 		data: $scope.dataReq,
 		url : "http://172.16.1.43:3000/pacientes/infoExpediente"
-		}).success(function(resultado){		
-		console.log(resultado);
-		$rootScope.paciente = resultado;
-		$location.path('/doc/paciente');
+		}).success(function(resultado){	
+		if(resultado.status)	{
+			$rootScope.paciente = resultado;
+			$location.path('/doc/paciente');
+		}else{
+			swal("Token Incorrecto!", "Intentalo de nuevo!", "error");			
+
+		}
+
 		});
 	}
 }
