@@ -1,4 +1,4 @@
-function RegisterCtrl($location, $scope, $http) {
+function RegisterCtrl($location, $scope, $http,$rootScope) {
 
 	var register = this;
 
@@ -37,7 +37,7 @@ function RegisterCtrl($location, $scope, $http) {
 		$http({
                       method : "POST",
                       data: $scope.register,
-                      url : "http://172.16.1.43:3000/pacientes/"
+                      url : $rootScope.host+"/pacientes/"
                   }).success(function(resultado, status, headers, config){
                             swal("Registro guardado", "El usuario se dio de alta con exito", "success");				
                           $location.path('/');

@@ -89,7 +89,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('doc.dash', {
             url: "/dash",
-            templateUrl: "views/doctor/dashboard_1.html",
+            templateUrl: "views/search.html",
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -187,4 +187,5 @@ angular
     .config(config)
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;
+        $rootScope.host = "http://172.16.1.43:3000";
     });

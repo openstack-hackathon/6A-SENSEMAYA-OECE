@@ -4,6 +4,11 @@ function InfoPCtrl($location, $scope, $http,$rootScope) {
 		var p = $rootScope.paciente.result;
 		console.log(p);
 		$scope.d1=""+p.nombre +" "+p.apellidoPaterno +" "+p.apellidoMaterno;
+		if(p.genero==="M"){
+			p.genero="Masculino";
+		}else{
+			p.genero="Femenino";			
+		}
 		$scope.d2="Genero: "+p.genero +" Estatura: "+p.statura +" Peso: "+p.peso;
 		$scope.d3="Tipo de sangre: "+p.tipo;
 	$scope.realizatx = function(){

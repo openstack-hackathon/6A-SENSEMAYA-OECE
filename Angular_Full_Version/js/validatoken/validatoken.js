@@ -11,7 +11,7 @@ function validacionCtrl($location, $scope, $http,$rootScope) {
 		$http({
 		method : "POST",
 		data: $scope.dataReq,
-		url : "http://172.16.1.43:3000/pacientes/infoExpediente"
+		url : $rootScope.host+"/pacientes/infoExpediente"
 		}).success(function(resultado){	
 		if(resultado.status)	{
 			$rootScope.paciente = resultado;
