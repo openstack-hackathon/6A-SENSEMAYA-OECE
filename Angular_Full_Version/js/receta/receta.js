@@ -74,11 +74,19 @@ POST  http://127.16.1.43:3000/exp/notaMedica/57d437a7ab27a76ed76bb56e
          data: $scope.datPaciente,
          url : "http://172.16.1.43:3000/exp/notaMedica/"+$scope.idPaciente
        }).success(function(resultado, status, headers, config){
-           console.log("Nota medica guardada");
+           console.log("Historial Medico");
            $scope.result = resultado.result;
+           console.log($scope.result);
        });
   }
 
+  $scope.detalle = function(reg){
+    console.log("reg");
+    console.log(reg);
+    $scope.detalleHis = reg;
+  }
+
+  
   $scope.realizatx = function(){
     $scope.showHistMedica = false;
     $scope.showNotaMedica = true;
