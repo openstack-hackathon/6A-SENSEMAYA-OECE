@@ -18,11 +18,11 @@ var express = require('express'),
       var access = new accessModel(accessObject);
       access.save(function(err, doc){
         return res.send({success:true});
-        /*
+/*
           postData('',accessObject.tokenId,function(){
               return common.send(err,doc, res);
-          })
-*/
+          })*/
+
       });
 
     })
@@ -37,9 +37,10 @@ var express = require('express'),
     }
 
   function postData(num, data, callback){
-     console.log("https://www.masmensajes.com.mx/wss/smsapi11.php?usuario=isa&password=isasystem&celular=+52331125605&mensaje="+data);
+    var mensajePost = "https://www.masmensajes.com.mx/wss/smsapi11.php?usuario=isa&password=isasystem&celular=+525552137297&mensaje="+data;
+     console.log(mensajePost);
      request.post(
-         "https://www.masmensajes.com.mx/wss/smsapi11.php?usuario=isa&password=isasystem&celular=+52"+num+"&mensaje="+data,
+        mensajePost,
          { form: { key: 'value' } },
          function (error, response, body) {
             callback();

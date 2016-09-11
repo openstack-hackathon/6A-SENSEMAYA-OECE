@@ -1,0 +1,212 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose readDependencies loading dependencies from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/package.json
+5 warn package.json ece@1.0.0 No description
+6 warn package.json ece@1.0.0 No repository field.
+7 warn package.json ece@1.0.0 No README data
+8 verbose install where, deps [ '/Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE',
+8 verbose install   [ 'alt',
+8 verbose install     'alt-container',
+8 verbose install     'alt-utils',
+8 verbose install     'body-parser',
+8 verbose install     'browser-request',
+8 verbose install     'express',
+8 verbose install     'express.io',
+8 verbose install     'extract-text-webpack-plugin',
+8 verbose install     'gulp',
+8 verbose install     'gulp-util',
+8 verbose install     'mongoose',
+8 verbose install     'multer',
+8 verbose install     'node-uuid',
+8 verbose install     'random-token',
+8 verbose install     'request',
+8 verbose install     'socket.io',
+8 verbose install     'socket.io-client',
+8 verbose install     'swift-client',
+8 verbose install     'swig',
+8 verbose install     'webpack' ] ]
+9 verbose install where, peers [ '/Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE', [] ]
+10 verbose installManyTop reading for lifecycle /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/package.json
+11 info preinstall ece@1.0.0
+12 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt/package.json
+13 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt-container/package.json
+14 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt-utils/package.json
+15 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/body-parser/package.json
+16 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/browser-request/package.json
+17 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/express/package.json
+18 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/express.io/package.json
+19 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/extract-text-webpack-plugin/package.json
+20 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/gulp/package.json
+21 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/gulp-util/package.json
+22 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/mongoose/package.json
+23 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/multer/package.json
+24 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/node-uuid/package.json
+25 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/random-token/package.json
+26 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/request/package.json
+27 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/socket.io/package.json
+28 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/socket.io-client/package.json
+29 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/swift-client/package.json
+30 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/swig/package.json
+31 verbose installManyTop reading scoped package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/webpack/package.json
+32 info package.json alt-utils@1.0.0 No repository field.
+33 info package.json browser-request@0.3.3 No license field.
+34 info package.json express.io@1.1.13 No license field.
+35 info package.json node-uuid@1.4.7 No license field.
+36 verbose readDependencies loading dependencies from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/package.json
+37 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt/package.json
+38 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt-container/package.json
+39 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/alt-utils/package.json
+40 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/body-parser/package.json
+41 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/browser-request/package.json
+42 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/express/package.json
+43 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/express.io/package.json
+44 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/extract-text-webpack-plugin/package.json
+45 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/gulp/package.json
+46 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/gulp-util/package.json
+47 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/mongoose/package.json
+48 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/multer/package.json
+49 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/node-uuid/package.json
+50 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/random-token/package.json
+51 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/request/package.json
+52 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/socket.io/package.json
+53 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/socket.io-client/package.json
+54 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/swift-client/package.json
+55 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/swig/package.json
+56 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/webpack/package.json
+57 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/.bin/gulp/package.json
+58 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/.bin/swig/package.json
+59 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/.bin/uuid/package.json
+60 verbose targetResolver reading package data from /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE/node_modules/.bin/webpack/package.json
+61 silly cache add args [ 'multer@^1.8.0', null ]
+62 verbose cache add spec multer@^1.8.0
+63 silly cache add parsed spec Result {
+63 silly cache add   raw: 'multer@^1.8.0',
+63 silly cache add   scope: null,
+63 silly cache add   name: 'multer',
+63 silly cache add   rawSpec: '^1.8.0',
+63 silly cache add   spec: '>=1.8.0 <2.0.0',
+63 silly cache add   type: 'range' }
+64 silly addNamed multer@>=1.8.0 <2.0.0
+65 verbose addNamed ">=1.8.0 <2.0.0" is a valid semver range for multer
+66 silly addNameRange { name: 'multer', range: '>=1.8.0 <2.0.0', hasData: false }
+67 silly mapToRegistry name multer
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry data Result {
+70 silly mapToRegistry   raw: 'multer',
+70 silly mapToRegistry   scope: null,
+70 silly mapToRegistry   name: 'multer',
+70 silly mapToRegistry   rawSpec: '',
+70 silly mapToRegistry   spec: 'latest',
+70 silly mapToRegistry   type: 'tag' }
+71 silly mapToRegistry uri https://registry.npmjs.org/multer
+72 verbose addNameRange registry:https://registry.npmjs.org/multer not in flight; fetching
+73 verbose already installed skipping node-uuid@^1.4.7 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+74 verbose already installed skipping random-token@0.0.8 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+75 verbose already installed skipping request@^2.73.0 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+76 verbose already installed skipping socket.io@^1.4.8 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+77 verbose already installed skipping socket.io-client@^1.4.8 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+78 verbose already installed skipping swift-client@^0.2.0 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+79 verbose already installed skipping swig@^1.4.2 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+80 verbose already installed skipping webpack@^1.13.1 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+81 verbose already installed skipping alt@^0.18.5 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+82 verbose already installed skipping alt-container@^1.0.2 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+83 verbose already installed skipping alt-utils@^1.0.0 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+84 verbose already installed skipping body-parser@^1.15.2 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+85 verbose already installed skipping browser-request@^0.3.3 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+86 verbose already installed skipping express@^4.14.0 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+87 verbose already installed skipping express.io@^1.1.13 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+88 verbose already installed skipping extract-text-webpack-plugin@^1.0.1 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+89 verbose already installed skipping gulp@^3.9.1 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+90 verbose already installed skipping gulp-util@^3.0.7 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+91 verbose already installed skipping mongoose@^4.5.9 /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+92 verbose request uri https://registry.npmjs.org/multer
+93 verbose request no auth needed
+94 info attempt registry request try #1 at 3:12:45 AM
+95 verbose request id fb6b74f19c61ebc7
+96 verbose etag "BE9E8502JTVLDHHV24A9FPAOC"
+97 http request GET https://registry.npmjs.org/multer
+98 http 304 https://registry.npmjs.org/multer
+99 verbose headers { date: 'Sun, 11 Sep 2016 08:12:46 GMT',
+99 verbose headers   via: '1.1 varnish',
+99 verbose headers   'cache-control': 'max-age=300',
+99 verbose headers   etag: '"BE9E8502JTVLDHHV24A9FPAOC"',
+99 verbose headers   age: '13',
+99 verbose headers   connection: 'keep-alive',
+99 verbose headers   'x-served-by': 'cache-dfw1823-DFW',
+99 verbose headers   'x-cache': 'HIT',
+99 verbose headers   'x-cache-hits': '1',
+99 verbose headers   'x-timer': 'S1473581566.063470,VS0,VE0',
+99 verbose headers   vary: 'Accept-Encoding' }
+100 silly get cb [ 304,
+100 silly get   { date: 'Sun, 11 Sep 2016 08:12:46 GMT',
+100 silly get     via: '1.1 varnish',
+100 silly get     'cache-control': 'max-age=300',
+100 silly get     etag: '"BE9E8502JTVLDHHV24A9FPAOC"',
+100 silly get     age: '13',
+100 silly get     connection: 'keep-alive',
+100 silly get     'x-served-by': 'cache-dfw1823-DFW',
+100 silly get     'x-cache': 'HIT',
+100 silly get     'x-cache-hits': '1',
+100 silly get     'x-timer': 'S1473581566.063470,VS0,VE0',
+100 silly get     vary: 'Accept-Encoding' } ]
+101 verbose etag https://registry.npmjs.org/multer from cache
+102 verbose get saving multer to /Users/mottaman/.npm/registry.npmjs.org/multer/.cache.json
+103 verbose correctMkdir /Users/mottaman/.npm correctMkdir not in flight; initializing
+104 silly addNameRange number 2 { name: 'multer', range: '>=1.8.0 <2.0.0', hasData: true }
+105 silly addNameRange versions [ 'multer',
+105 silly addNameRange   [ '0.0.1',
+105 silly addNameRange     '0.0.2',
+105 silly addNameRange     '0.0.3',
+105 silly addNameRange     '0.0.4',
+105 silly addNameRange     '0.0.5',
+105 silly addNameRange     '0.0.6',
+105 silly addNameRange     '0.0.7',
+105 silly addNameRange     '0.1.0',
+105 silly addNameRange     '0.1.1',
+105 silly addNameRange     '0.1.2',
+105 silly addNameRange     '0.1.3',
+105 silly addNameRange     '0.1.4',
+105 silly addNameRange     '0.1.6',
+105 silly addNameRange     '0.1.7',
+105 silly addNameRange     '0.1.8',
+105 silly addNameRange     '1.0.0',
+105 silly addNameRange     '1.0.1',
+105 silly addNameRange     '1.0.2',
+105 silly addNameRange     '1.0.3',
+105 silly addNameRange     '1.0.4',
+105 silly addNameRange     '1.0.5',
+105 silly addNameRange     '1.0.6',
+105 silly addNameRange     '1.1.0',
+105 silly addNameRange     '1.2.0' ] ]
+106 verbose stack Error: No compatible version found: multer@'>=1.8.0 <2.0.0'
+106 verbose stack Valid install targets:
+106 verbose stack ["0.0.1","0.0.2","0.0.3","0.0.4","0.0.5","0.0.6","0.0.7","0.1.0","0.1.1","0.1.2","0.1.3","0.1.4","0.1.6","0.1.7","0.1.8","1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.1.0","1.2.0"]
+106 verbose stack
+106 verbose stack     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:284:12)
+106 verbose stack     at next (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:262:19)
+106 verbose stack     at setData (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:236:5)
+106 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+106 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+106 verbose stack     at fixName (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:29:5)
+106 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:173:7)
+106 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+106 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+107 verbose cwd /Users/mottaman/PROJECTS/Hackathon_os/NODE_SERVICE
+108 error Darwin 14.5.0
+109 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+110 error node v4.4.7
+111 error npm  v2.15.8
+112 error code ETARGET
+113 error notarget No compatible version found: multer@'>=1.8.0 <2.0.0'
+113 error notarget Valid install targets:
+113 error notarget ["0.0.1","0.0.2","0.0.3","0.0.4","0.0.5","0.0.6","0.0.7","0.1.0","0.1.1","0.1.2","0.1.3","0.1.4","0.1.6","0.1.7","0.1.8","1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.1.0","1.2.0"]
+113 error notarget
+113 error notarget This is most likely not a problem with npm itself.
+113 error notarget In most cases you or one of your dependencies are requesting
+113 error notarget a package version that doesn't exist.
+113 error notarget
+113 error notarget It was specified as a dependency of 'ece'
+114 verbose exit [ 1, true ]

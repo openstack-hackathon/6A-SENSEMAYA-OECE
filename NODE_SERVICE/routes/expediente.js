@@ -1,6 +1,8 @@
 var express = require('express'),
     notaMedica = require('../model/NotaMedicaModel.js'),
     common = require('./CommonResponse'),
+    multer = require('multer'),
+    swiftClient = require('../helper/swiftWrapper.js'),
     router = express.Router();
 
     router.get('/', function(req, res){
@@ -29,7 +31,21 @@ var express = require('express'),
 
     })
 
-    router.put('/notaMedica/:idNota/:idPaciente', function(req, res){
+    var storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, './uploads')
+      },
+      filename: function (req, file, cb) {
+          cb(null, file.originalname);
+
+      }
+    })
+
+    router.put('/notaMedica/:idNota/:idPaciente',
+      multer({storage:storage}).single('upl'),
+      function(req, res){
+
+      swiftClient.uploadImage("","");
 
       res.send({success:true});
     })

@@ -47,6 +47,29 @@ swiftClient.getInstances = function(){
   })
 }
 
+swiftClient.uploadImage = function(nameContainer, callback){
+  console.log("CREATE CONTAINER SESSION");
+  console.log(process.env.TOKEN_SESSION);
+
+  request.put({
+    url : url+'57d4a7f95ad30b7f7be582fe'+'/143Snorlax_AG_anime.png',
+    "headers": {
+      'X-Auth-Token': process.env.TOKEN_SESSION,
+      "Content-Length": "1"
+    }
+  },callback);
+
+  function callback(error, response, body) {
+    console.log(response.statusCode);
+    if (!error && response.statusCode == 200) {
+      console.log(body);
+      //console.log(info.stargazers_count + " Stars");
+      //console.log(info.forks_count + " Forks");
+    }
+  }
+
+}
+
 swiftClient.createContainer = function(nameContainer, callback){
   console.log("CREATE CONTAINER SESSION");
   console.log(process.env.TOKEN_SESSION);
